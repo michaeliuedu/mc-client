@@ -1,0 +1,98 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 6/6/21 7:20 PM
+Description: Rendering screen
+
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at bear.gui.config.components.RGBGui.getColor(RGBGui.java:98)
+	at bear.gui.panel.WatermarkPanel.drawScreen(WatermarkPanel.java:52)
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1406)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1142)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:425)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at bear.gui.config.components.RGBGui.getColor(RGBGui.java:98)
+	at bear.gui.panel.WatermarkPanel.drawScreen(WatermarkPanel.java:52)
+
+-- Screen render details --
+Details:
+	Screen name: bear.gui.panel.WatermarkPanel
+	Mouse location: Scaled: (421, 168). Absolute: (421, 311)
+	Screen size: Scaled: (854, 480). Absolute: (854, 480). Scale factor of 1
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['bear'/241, l='MpServer', x=1537.72, y=4.00, z=652.38]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 1446.00,4.00,613.00 - World: (1446,4,613), Chunk: (at 6,0,5 in 90,38; contains blocks 1440,0,608 to 1455,255,623), Region: (2,1; contains chunks 64,32 to 95,63, blocks 1024,0,512 to 1535,255,1023)
+	Level time: 96537 game time, 13817 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 76 total; [EntityPlayerSP['bear'/241, l='MpServer', x=1537.72, y=4.00, z=652.38], EntitySkeleton['Skeleton'/128, l='MpServer', x=1539.16, y=4.00, z=707.53], EntitySkeleton['Skeleton'/129, l='MpServer', x=1527.25, y=4.00, z=710.78], EntitySpider['Spider'/130, l='MpServer', x=1522.50, y=4.00, z=712.50], EntityChicken['Chicken'/138, l='MpServer', x=1551.50, y=4.00, z=579.53], EntityChicken['Chicken'/139, l='MpServer', x=1548.88, y=4.00, z=601.50], EntityRabbit['Rabbit'/140, l='MpServer', x=1541.80, y=4.29, z=688.70], EntitySlime['Slime'/141, l='MpServer', x=1529.03, y=4.00, z=702.09], EntitySlime['Slime'/142, l='MpServer', x=1524.40, y=5.06, z=700.14], EntitySlime['Slime'/143, l='MpServer', x=1553.53, y=4.26, z=711.82], EntityItem['item.item.egg'/76696, l='MpServer', x=1548.47, y=4.00, z=601.38], EntityItem['item.item.egg'/154, l='MpServer', x=1564.25, y=4.00, z=591.44], EntityChicken['Chicken'/155, l='MpServer', x=1560.94, y=4.00, z=597.28], EntitySpider['Spider'/156, l='MpServer', x=1564.17, y=4.00, z=638.57], EntitySlime['Slime'/157, l='MpServer', x=1565.81, y=4.00, z=695.78], EntityRabbit['Rabbit'/162, l='MpServer', x=1573.09, y=4.00, z=624.34], EntityItem['item.item.wheat'/163, l='MpServer', x=1581.44, y=4.00, z=667.66], EntityItem['item.item.seeds'/164, l='MpServer', x=1581.50, y=5.00, z=665.69], EntityItem['item.item.carrots'/165, l='MpServer', x=1575.31, y=5.00, z=686.97], EntityItem['item.item.carrots'/166, l='MpServer', x=1574.69, y=5.00, z=685.66], EntityItem['item.item.wheat'/167, l='MpServer', x=1571.88, y=5.00, z=689.66], EntityItem['item.item.seeds'/168, l='MpServer', x=1572.69, y=5.00, z=689.78], EntitySlime['Slime'/169, l='MpServer', x=1572.53, y=4.00, z=702.28], EntitySlime['Slime'/170, l='MpServer', x=1577.72, y=4.40, z=708.58], EntitySlime['Slime'/171, l='MpServer', x=1569.97, y=4.00, z=721.18], EntityZombie['Zombie'/76586, l='MpServer', x=1473.50, y=4.00, z=716.50], EntityItem['item.item.seeds'/175, l='MpServer', x=1595.84, y=5.00, z=652.66], EntityZombie['Zombie'/76590, l='MpServer', x=1476.50, y=4.00, z=727.50], EntityItem['item.item.potato'/176, l='MpServer', x=1599.66, y=5.00, z=667.19], EntityZombie['Zombie'/177, l='MpServer', x=1599.50, y=5.00, z=680.69], EntitySlime['Slime'/178, l='MpServer', x=1589.47, y=4.00, z=695.97], EntitySlime['Slime'/179, l='MpServer', x=1590.20, y=4.27, z=681.27], EntitySlime['Slime'/180, l='MpServer', x=1599.57, y=4.26, z=702.30], EntitySlime['Slime'/181, l='MpServer', x=1602.66, y=4.00, z=715.47], EntityItem['item.item.slimeball'/188, l='MpServer', x=1601.44, y=4.00, z=682.13], EntitySlime['Slime'/189, l='MpServer', x=1612.05, y=5.16, z=677.31], EntitySlime['Slime'/190, l='MpServer', x=1594.10, y=4.00, z=709.91], EntitySlime['Slime'/195, l='MpServer', x=1614.71, y=4.93, z=595.56], EntitySpider['Spider'/76482, l='MpServer', x=1496.50, y=4.00, z=644.50], EntitySkeleton['Skeleton'/76484, l='MpServer', x=1485.50, y=4.00, z=734.50], EntitySkeleton['Skeleton'/76488, l='MpServer', x=1491.50, y=4.00, z=734.50], EntitySkeleton['Skeleton'/76494, l='MpServer', x=1488.50, y=4.00, z=733.50], EntityZombie['Zombie'/76503, l='MpServer', x=1482.50, y=4.00, z=629.50], EntityRabbit['Rabbit'/89, l='MpServer', x=1467.06, y=4.00, z=641.47], EntityRabbit['Rabbit'/90, l='MpServer', x=1466.28, y=4.00, z=693.63], EntitySheep['Sheep'/92, l='MpServer', x=1485.88, y=4.00, z=631.34], EntitySlime['Slime'/93, l='MpServer', x=1480.18, y=4.03, z=632.54], EntitySkeleton['Skeleton'/76508, l='MpServer', x=1525.50, y=4.00, z=721.50], EntitySkeleton['Skeleton'/94, l='MpServer', x=1475.38, y=4.00, z=635.50], EntityRabbit['Rabbit'/95, l='MpServer', x=1472.91, y=4.00, z=652.72], EntityPig['Pig'/97, l='MpServer', x=1490.03, y=4.00, z=593.97], EntitySpider['Spider'/98, l='MpServer', x=1491.38, y=4.00, z=617.97], EntityRabbit['Rabbit'/99, l='MpServer', x=1501.00, y=4.00, z=659.44], EntitySlime['Slime'/100, l='MpServer', x=1516.13, y=5.15, z=679.19], EntitySlime['Slime'/101, l='MpServer', x=1500.51, y=4.40, z=681.96], EntitySpider['Spider'/102, l='MpServer', x=1493.22, y=4.00, z=712.28], EntitySlime['Slime'/106, l='MpServer', x=1517.09, y=4.00, z=608.59], EntitySlime['Slime'/107, l='MpServer', x=1523.42, y=4.00, z=612.27], EntitySpider['Spider'/76522, l='MpServer', x=1490.50, y=4.00, z=639.50], EntityRabbit['Rabbit'/108, l='MpServer', x=1515.63, y=4.00, z=607.78], EntityRabbit['Rabbit'/109, l='MpServer', x=1515.59, y=4.00, z=623.72], EntitySlime['Slime'/110, l='MpServer', x=1504.41, y=4.00, z=656.06], EntitySlime['Slime'/111, l='MpServer', x=1522.16, y=4.40, z=699.41], EntityCreeper['Creeper'/76530, l='MpServer', x=1490.50, y=4.00, z=634.50], EntityItem['item.item.egg'/118, l='MpServer', x=1534.75, y=4.00, z=607.28], EntitySlime['Slime'/119, l='MpServer', x=1528.28, y=5.06, z=587.79], EntitySlime['Slime'/120, l='MpServer', x=1531.35, y=4.55, z=608.62], EntityRabbit['Rabbit'/121, l='MpServer', x=1534.38, y=4.00, z=619.34], EntityChicken['Chicken'/122, l='MpServer', x=1532.63, y=4.00, z=621.31], EntityRabbit['Rabbit'/123, l='MpServer', x=1523.13, y=4.00, z=675.22], EntitySlime['Slime'/124, l='MpServer', x=1530.56, y=4.00, z=696.28], EntitySkeleton['Skeleton'/76541, l='MpServer', x=1617.69, y=3.00, z=692.53], EntitySlime['Slime'/125, l='MpServer', x=1545.62, y=4.55, z=697.08], EntitySlime['Slime'/126, l='MpServer', x=1520.14, y=4.14, z=693.82], EntitySkeleton['Skeleton'/76543, l='MpServer', x=1615.50, y=4.00, z=688.50], EntitySkeleton['Skeleton'/127, l='MpServer', x=1524.81, y=4.00, z=717.19]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:404)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2768)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:446)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 
+	Java Version: 1.8.0_292, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), AdoptOpenJDK
+	Memory: 759120600 bytes (723 MB) / 1071120384 bytes (1021 MB) up to 1071120384 bytes (1021 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 466.63, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 466.63
+	OpenGlRenderer: NVIDIA GeForce RTX 2060/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12

@@ -1,0 +1,90 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 6/4/21 6:40 PM
+Description: Updating screen events
+
+java.lang.IllegalStateException: Keyboard must be created before you can read events
+	at org.lwjgl.input.Keyboard.next(Keyboard.java:475)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:574)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1788)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1115)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:424)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at org.lwjgl.input.Keyboard.next(Keyboard.java:475)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:574)
+
+-- Affected screen --
+Details:
+	Screen name: bear.gui.config.ClickGUI
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player500'/92726, l='MpServer', x=1413.93, y=4.00, z=770.93]]
+	Chunk stats: MultiplayerChunkCache: 287, 287
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 1446.00,4.00,613.00 - World: (1446,4,613), Chunk: (at 6,0,5 in 90,38; contains blocks 1440,0,608 to 1455,255,623), Region: (2,1; contains chunks 64,32 to 95,63, blocks 1024,0,512 to 1535,255,1023)
+	Level time: 18221 game time, 5424 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 57 total; [EntitySlime['Slime'/167047, l='MpServer', x=1427.38, y=5.16, z=815.84], EntitySlime['Slime'/303766, l='MpServer', x=1491.50, y=4.00, z=784.88], EntitySlime['Slime'/269982, l='MpServer', x=1432.16, y=4.27, z=813.64], EntitySlime['Slime'/92574, l='MpServer', x=1358.78, y=4.47, z=791.09], EntityVillager['Villager'/92579, l='MpServer', x=1389.03, y=5.00, z=716.56], EntityVillager['Villager'/92578, l='MpServer', x=1384.88, y=4.00, z=699.00], EntityItem['item.item.potato'/92581, l='MpServer', x=1387.22, y=5.00, z=737.66], EntityVillager['Villager'/92580, l='MpServer', x=1384.69, y=5.00, z=712.78], EntityItem['item.item.potato'/92583, l='MpServer', x=1391.59, y=5.00, z=736.91], EntityItem['item.item.potato'/92582, l='MpServer', x=1390.03, y=4.00, z=738.72], EntitySlime['Slime'/92584, l='MpServer', x=1383.50, y=4.75, z=741.38], EntitySlime['Slime'/208810, l='MpServer', x=1403.26, y=5.07, z=750.64], EntitySlime['Slime'/92588, l='MpServer', x=1391.53, y=4.00, z=765.75], EntitySlime['Slime'/99760, l='MpServer', x=1407.53, y=4.00, z=762.81], EntityVillager['Villager'/92595, l='MpServer', x=1395.56, y=4.00, z=695.88], EntityVillager['Villager'/92597, l='MpServer', x=1404.91, y=6.00, z=715.63], EntitySlime['Slime'/92596, l='MpServer', x=1377.97, y=5.47, z=707.00], EntityVillager['Villager'/92599, l='MpServer', x=1396.69, y=2.00, z=704.44], EntityVillager['Villager'/92598, l='MpServer', x=1394.63, y=4.00, z=704.69], EntityVillager['Villager'/92601, l='MpServer', x=1393.28, y=4.00, z=704.41], EntitySlime['Slime'/92729, l='MpServer', x=1470.44, y=4.00, z=829.91], EntityVillager['Villager'/92600, l='MpServer', x=1402.22, y=4.00, z=715.47], EntitySlime['Slime'/92728, l='MpServer', x=1465.78, y=3.91, z=832.19], EntityPlayerSP['Player500'/92726, l='MpServer', x=1413.93, y=4.00, z=770.93], EntitySlime['Slime'/92603, l='MpServer', x=1391.56, y=4.00, z=780.31], EntityItem['item.item.potato'/92602, l='MpServer', x=1392.72, y=5.00, z=737.41], EntitySlime['Slime'/92730, l='MpServer', x=1466.33, y=4.26, z=845.86], EntitySlime['Slime'/92604, l='MpServer', x=1374.63, y=4.47, z=777.59], EntityVillager['Villager'/92609, l='MpServer', x=1409.00, y=4.00, z=689.69], EntityVillager['Villager'/92608, l='MpServer', x=1419.38, y=4.00, z=691.69], EntityCow['Cow'/92611, l='MpServer', x=1412.97, y=5.00, z=710.84], EntityItem['item.item.seeds'/92610, l='MpServer', x=1421.22, y=5.00, z=714.06], EntityItem['item.item.seeds'/92613, l='MpServer', x=1420.03, y=5.00, z=717.50], EntityItem['item.item.wheat'/92612, l='MpServer', x=1421.28, y=5.00, z=718.56], EntityItem['item.item.seeds'/92615, l='MpServer', x=1421.88, y=5.00, z=713.00], EntityItem['item.item.wheat'/92614, l='MpServer', x=1419.41, y=4.00, z=715.19], EntityCow['Cow'/92617, l='MpServer', x=1425.88, y=4.00, z=717.97], EntityVillager['Villager'/92616, l='MpServer', x=1402.66, y=4.00, z=701.38], EntitySlime['Slime'/92619, l='MpServer', x=1397.25, y=4.47, z=738.53], EntitySlime['Slime'/92618, l='MpServer', x=1405.91, y=4.00, z=775.94], EntitySlime['Slime'/92620, l='MpServer', x=1421.25, y=4.00, z=757.31], EntitySlime['Slime'/92623, l='MpServer', x=1429.84, y=4.00, z=800.03], EntitySlime['Slime'/92622, l='MpServer', x=1403.34, y=5.22, z=825.34], EntitySlime['Slime'/92627, l='MpServer', x=1430.72, y=4.00, z=772.06], EntitySlime['Slime'/100435, l='MpServer', x=1450.09, y=4.00, z=744.69], EntitySlime['Slime'/92626, l='MpServer', x=1438.91, y=4.00, z=793.72], EntitySlime['Slime'/231767, l='MpServer', x=1432.91, y=4.00, z=795.53], EntitySlime['Slime'/92630, l='MpServer', x=1462.13, y=4.00, z=764.03], EntitySlime['Slime'/231764, l='MpServer', x=1409.31, y=4.00, z=810.22], EntitySlime['Slime'/92634, l='MpServer', x=1469.66, y=4.00, z=805.91], EntityXPOrb['Experience Orb'/92641, l='MpServer', x=1457.34, y=4.00, z=698.81], EntitySlime['Slime'/92643, l='MpServer', x=1459.72, y=5.16, z=703.34], EntityXPOrb['Experience Orb'/92642, l='MpServer', x=1466.03, y=4.00, z=700.44], EntitySlime['Slime'/92645, l='MpServer', x=1436.84, y=5.16, z=797.16], EntityRabbit['Rabbit'/92655, l='MpServer', x=1491.59, y=4.00, z=716.59], EntitySlime['Slime'/92657, l='MpServer', x=1477.28, y=4.00, z=773.81], EntitySlime['Slime'/92656, l='MpServer', x=1482.19, y=5.00, z=733.59]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:401)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2762)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:445)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 
+	Java Version: 1.8.0_292, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), AdoptOpenJDK
+	Memory: 834648856 bytes (795 MB) / 1067974656 bytes (1018 MB) up to 1067974656 bytes (1018 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 466.63
+	OpenGlRenderer: NVIDIA GeForce RTX 2060/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12

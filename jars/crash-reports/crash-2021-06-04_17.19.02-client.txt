@@ -1,0 +1,58 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 6/4/21 5:19 PM
+Description: Initializing game
+
+java.lang.NullPointerException: Initializing game
+	at bear.modules.hud.FramesCounter.getHeight(FramesCounter.java:34)
+	at bear.gui.mod.HudMod.<init>(HudMod.java:24)
+	at bear.modules.hud.FramesCounter.<init>(FramesCounter.java:12)
+	at bear.gui.mod.HudManager.<init>(HudManager.java:19)
+	at bear.Client.init(Client.java:31)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:474)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:404)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at bear.modules.hud.FramesCounter.getHeight(FramesCounter.java:34)
+	at bear.gui.mod.HudMod.<init>(HudMod.java:24)
+	at bear.modules.hud.FramesCounter.<init>(FramesCounter.java:12)
+	at bear.gui.mod.HudManager.<init>(HudManager.java:19)
+	at bear.Client.init(Client.java:31)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:474)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.run(Minecraft.java:404)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: <unknown>
+	Java Version: 1.8.0_292, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), AdoptOpenJDK
+	Memory: 860847624 bytes (820 MB) / 1029177344 bytes (981 MB) up to 1029177344 bytes (981 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	GL Caps: 
+	Using VBOs: ~~ERROR~~ NullPointerException: null
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: ~~ERROR~~ NullPointerException: null
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: <unknown>

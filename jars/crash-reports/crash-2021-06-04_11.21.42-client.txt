@@ -1,0 +1,88 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 6/4/21 11:21 AM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at bear.modules.hud.Watermark.draw(Watermark.java:16)
+	at bear.gui.mod.HudManager.renderMods(HudManager.java:17)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:354)
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1353)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1141)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:424)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at bear.modules.hud.Watermark.draw(Watermark.java:16)
+	at bear.gui.mod.HudManager.renderMods(HudManager.java:17)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:354)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player93'/244, l='MpServer', x=695.09, y=72.00, z=287.45]]
+	Chunk stats: MultiplayerChunkCache: 285, 285
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 584.00,64.00,166.00 - World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 23748 game time, 10572 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 119 total; [EntityPlayerSP['Player93'/244, l='MpServer', x=695.09, y=72.00, z=287.45], EntityXPOrb['Experience Orb'/41, l='MpServer', x=604.25, y=70.00, z=306.75], EntityXPOrb['Experience Orb'/42, l='MpServer', x=604.38, y=70.00, z=306.03], EntityXPOrb['Experience Orb'/43, l='MpServer', x=604.97, y=70.00, z=306.75], EntityCreeper['Creeper'/556, l='MpServer', x=671.50, y=19.00, z=208.50], EntitySkeleton['Skeleton'/58, l='MpServer', x=617.50, y=23.00, z=339.50], EntitySkeleton['Skeleton'/60, l='MpServer', x=616.50, y=23.00, z=339.50], EntitySkeleton['Skeleton'/61, l='MpServer', x=623.84, y=19.00, z=337.50], EntitySkeleton['Skeleton'/575, l='MpServer', x=740.97, y=45.00, z=232.50], EntitySpider['Spider'/576, l='MpServer', x=739.00, y=45.00, z=232.50], EntitySpider['Spider'/579, l='MpServer', x=706.93, y=15.00, z=281.54], EntityMinecartChest['container.minecart'/68, l='MpServer', x=630.50, y=35.06, z=324.50], EntityZombie['Zombie'/73, l='MpServer', x=684.50, y=29.00, z=334.50], EntityMinecartChest['container.minecart'/76, l='MpServer', x=695.50, y=18.06, z=237.50], EntityZombie['Zombie'/77, l='MpServer', x=702.44, y=69.00, z=282.25], EntityBat['Bat'/79, l='MpServer', x=706.25, y=19.10, z=254.44], EntityBat['Bat'/80, l='MpServer', x=716.56, y=18.09, z=255.22], EntityBat['Bat'/81, l='MpServer', x=708.75, y=17.56, z=254.50], EntityBat['Bat'/82, l='MpServer', x=713.13, y=18.16, z=256.00], EntityZombie['Zombie'/83, l='MpServer', x=717.22, y=48.00, z=261.81], EntityZombie['Zombie'/84, l='MpServer', x=709.28, y=69.00, z=298.50], EntityZombie['Zombie'/85, l='MpServer', x=711.09, y=69.00, z=299.00], EntityZombie['Zombie'/86, l='MpServer', x=712.69, y=69.00, z=298.50], EntityZombie['Zombie'/87, l='MpServer', x=707.50, y=71.00, z=294.50], EntityItem['item.item.rottenFlesh'/88, l='MpServer', x=713.94, y=70.00, z=318.06], EntityItem['item.item.rottenFlesh'/89, l='MpServer', x=714.88, y=70.00, z=318.63], EntityItem['item.item.rottenFlesh'/90, l='MpServer', x=719.53, y=71.00, z=319.09], EntityItem['item.item.rottenFlesh'/91, l='MpServer', x=719.69, y=70.00, z=314.41], EntityItem['item.item.rottenFlesh'/604, l='MpServer', x=713.97, y=71.00, z=347.84], EntityItem['item.item.rottenFlesh'/610, l='MpServer', x=749.56, y=66.00, z=301.95], EntityItem['item.item.rottenFlesh'/614, l='MpServer', x=716.03, y=69.00, z=349.22], EntityItem['item.item.rottenFlesh'/104, l='MpServer', x=718.47, y=71.00, z=320.06], EntityItem['item.item.rottenFlesh'/105, l='MpServer', x=711.25, y=69.00, z=320.81], EntityItem['item.item.rottenFlesh'/108, l='MpServer', x=716.97, y=71.00, z=321.03], EntityItem['item.item.rottenFlesh'/109, l='MpServer', x=718.19, y=71.00, z=322.22], EntityItem['item.item.rottenFlesh'/110, l='MpServer', x=718.81, y=71.00, z=326.44], EntityItem['item.item.rottenFlesh'/111, l='MpServer', x=709.75, y=69.00, z=329.13], EntityItem['item.item.rottenFlesh'/112, l='MpServer', x=709.72, y=68.00, z=327.50], EntityItem['item.item.rottenFlesh'/113, l='MpServer', x=707.28, y=64.00, z=332.13], EntityItem['item.item.rottenFlesh'/114, l='MpServer', x=707.75, y=64.00, z=332.88], EntityItem['item.item.rottenFlesh'/115, l='MpServer', x=714.50, y=65.00, z=327.13], EntityItem['item.item.rottenFlesh'/117, l='MpServer', x=709.09, y=67.00, z=325.59], EntityItem['item.item.rottenFlesh'/119, l='MpServer', x=715.03, y=67.00, z=328.88], EntityItem['item.item.rottenFlesh'/120, l='MpServer', x=716.28, y=71.00, z=330.22], EntityItem['item.item.chestplateDiamond'/121, l='MpServer', x=709.84, y=67.00, z=339.38], EntityBat['Bat'/636, l='MpServer', x=741.00, y=29.33, z=279.03], EntityBat['Bat'/638, l='MpServer', x=740.50, y=28.63, z=282.50], EntityBat['Bat'/640, l='MpServer', x=736.73, y=28.02, z=282.58], EntityZombie['Zombie'/131, l='MpServer', x=710.56, y=72.00, z=344.16], EntityBat['Bat'/643, l='MpServer', x=720.75, y=19.79, z=254.25], EntityBat['Bat'/645, l='MpServer', x=772.84, y=27.31, z=243.11], EntitySquid['Squid'/136, l='MpServer', x=732.66, y=58.13, z=230.28], EntitySquid['Squid'/137, l='MpServer', x=730.84, y=56.00, z=248.00], EntityCreeper['Creeper'/138, l='MpServer', x=729.50, y=39.00, z=280.50], EntityBat['Bat'/139, l='MpServer', x=719.88, y=30.44, z=275.66], EntitySquid['Squid'/140, l='MpServer', x=725.75, y=55.44, z=287.69], EntityItem['item.item.rottenFlesh'/141, l='MpServer', x=735.38, y=63.00, z=307.88], EntityItem['item.item.rottenFlesh'/142, l='MpServer', x=721.50, y=71.00, z=319.41], EntityItem['item.item.rottenFlesh'/143, l='MpServer', x=721.09, y=71.00, z=317.28], EntityItem['item.item.rottenFlesh'/144, l='MpServer', x=732.28, y=68.00, z=319.88], EntityItem['item.item.rottenFlesh'/145, l='MpServer', x=722.56, y=69.00, z=331.28], EntityItem['item.item.rottenFlesh'/146, l='MpServer', x=726.59, y=69.00, z=323.59], EntityItem['item.item.rottenFlesh'/147, l='MpServer', x=721.19, y=71.00, z=324.91], EntityItem['item.item.rottenFlesh'/148, l='MpServer', x=720.66, y=71.00, z=322.81], EntityItem['item.item.rottenFlesh'/149, l='MpServer', x=723.81, y=70.00, z=323.84], EntityItem['item.item.rottenFlesh'/405, l='MpServer', x=715.13, y=68.00, z=326.41], EntityItem['item.item.rottenFlesh'/150, l='MpServer', x=720.59, y=71.00, z=324.03], EntityItem['item.item.rottenFlesh'/151, l='MpServer', x=723.31, y=69.00, z=326.94], EntityItem['item.item.rottenFlesh'/152, l='MpServer', x=729.06, y=68.00, z=322.63], EntityItem['item.item.rottenFlesh'/153, l='MpServer', x=728.13, y=68.00, z=322.13], EntityItem['item.item.rottenFlesh'/411, l='MpServer', x=715.34, y=71.00, z=332.97], EntityZombie['Zombie'/155, l='MpServer', x=751.06, y=47.00, z=209.16], EntityMinecartChest['container.minecart'/156, l='MpServer', x=738.50, y=19.06, z=248.50], EntitySpider['Spider'/157, l='MpServer', x=750.50, y=35.00, z=254.50], EntitySquid['Squid'/158, l='MpServer', x=750.25, y=62.16, z=284.69], EntityItem['item.item.rottenFlesh'/414, l='MpServer', x=704.81, y=66.00, z=345.78], EntityBat['Bat'/159, l='MpServer', x=740.50, y=24.59, z=298.06], EntityItem['item.item.rottenFlesh'/160, l='MpServer', x=748.69, y=65.00, z=302.13], EntityItem['item.item.rottenFlesh'/161, l='MpServer', x=750.38, y=66.00, z=302.88], EntityItem['item.item.rottenFlesh'/417, l='MpServer', x=711.88, y=70.00, z=326.41], EntityItem['item.item.rottenFlesh'/162, l='MpServer', x=737.97, y=60.00, z=304.09], EntityItem['item.item.rottenFlesh'/163, l='MpServer', x=740.47, y=63.00, z=305.00], EntityItem['item.item.rottenFlesh'/419, l='MpServer', x=712.91, y=71.00, z=325.06], EntityItem['item.item.helmetDiamond'/164, l='MpServer', x=750.69, y=68.00, z=311.28], EntityZombie['Zombie'/165, l='MpServer', x=748.69, y=68.00, z=309.28], EntityItem['item.item.rottenFlesh'/166, l='MpServer', x=750.88, y=68.00, z=309.50], EntityItem['item.item.rottenFlesh'/422, l='MpServer', x=711.03, y=72.00, z=336.06], EntityItem['item.item.rottenFlesh'/167, l='MpServer', x=750.09, y=68.00, z=311.13], EntityItem['item.item.rottenFlesh'/168, l='MpServer', x=746.34, y=68.00, z=311.44], EntityItem['item.item.rottenFlesh'/169, l='MpServer', x=747.22, y=68.00, z=311.41], EntityItem['item.item.rottenFlesh'/425, l='MpServer', x=710.09, y=71.00, z=334.63], EntityItem['item.item.rottenFlesh'/170, l='MpServer', x=749.97, y=68.00, z=309.94], EntityItem['item.item.rottenFlesh'/171, l='MpServer', x=750.88, y=68.00, z=310.91], EntityItem['item.item.rottenFlesh'/427, l='MpServer', x=709.03, y=72.00, z=339.31], EntityItem['item.item.rottenFlesh'/172, l='MpServer', x=748.19, y=68.00, z=311.81], EntityZombie['Zombie'/173, l='MpServer', x=742.13, y=67.00, z=317.13], EntityItem['item.item.rottenFlesh'/174, l='MpServer', x=744.88, y=68.00, z=310.78], EntityItem['item.item.rottenFlesh'/175, l='MpServer', x=742.91, y=68.00, z=311.50], EntityItem['item.item.rottenFlesh'/176, l='MpServer', x=744.66, y=68.00, z=313.34], EntityItem['item.item.rottenFlesh'/177, l='MpServer', x=746.59, y=65.00, z=319.41], EntityItem['item.item.rottenFlesh'/178, l='MpServer', x=743.88, y=64.00, z=305.88], EntityItem['item.item.rottenFlesh'/179, l='MpServer', x=738.34, y=67.00, z=318.34], EntityItem['item.item.rottenFlesh'/435, l='MpServer', x=705.06, y=67.00, z=343.69], EntityZombie['Zombie'/180, l='MpServer', x=746.50, y=65.00, z=320.25], EntityItem['item.item.rottenFlesh'/181, l='MpServer', x=740.31, y=64.00, z=322.69], EntityItem['item.item.rottenFlesh'/437, l='MpServer', x=704.97, y=68.00, z=346.12], EntityItem['item.item.rottenFlesh'/182, l='MpServer', x=739.34, y=64.00, z=322.78], EntityItem['item.item.rottenFlesh'/439, l='MpServer', x=711.28, y=71.00, z=347.47], EntityItem['item.item.rottenFlesh'/441, l='MpServer', x=705.16, y=68.00, z=350.00], EntityMinecartChest['container.minecart'/204, l='MpServer', x=754.50, y=20.06, z=228.50], EntityZombie['Zombie'/205, l='MpServer', x=766.22, y=37.00, z=243.22], EntityZombie['Zombie'/206, l='MpServer', x=764.50, y=37.00, z=250.50], EntityItem['item.item.rottenFlesh'/208, l='MpServer', x=752.13, y=68.00, z=308.66], EntityItem['item.item.rottenFlesh'/209, l='MpServer', x=754.28, y=67.00, z=304.53], EntityItem['item.item.rottenFlesh'/210, l='MpServer', x=752.50, y=65.00, z=315.75], EntitySkeleton['Skeleton'/211, l='MpServer', x=765.50, y=16.00, z=332.50], EntityZombie['Zombie'/212, l='MpServer', x=760.03, y=62.31, z=329.63], EntityMinecartChest['container.minecart'/226, l='MpServer', x=775.50, y=20.06, z=220.50], EntitySkeleton['Skeleton'/234, l='MpServer', x=767.50, y=17.00, z=336.09]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:401)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2762)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:453)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 
+	Java Version: 1.8.0_292, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), AdoptOpenJDK
+	Memory: 738656624 bytes (704 MB) / 964689920 bytes (920 MB) up to 964689920 bytes (920 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 98
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce RTX 2060/PCIe/SSE2 GL version 4.6.0 NVIDIA 466.63, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 466.63
+	OpenGlRenderer: NVIDIA GeForce RTX 2060/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12
